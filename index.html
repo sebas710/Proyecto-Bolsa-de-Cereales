@@ -1,21 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inicio - Intranet Bolsa de Cereales</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body style="background-image: url('/img/logo.jpg');">
-    <table border="1">
-        <tr>
-            <td>1</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-    </table>
-    <script></script>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Bienvenido a la Intranet de la Red de Colaboradores BC</h1>
+
+    </div>
+
+    <div id="volver">
+        <p>Ir a la web oficial de <a href= https://www.bolsadecereales.com/ >Bolsa de Cereales</a>.</p>
+    </div>
+</header>
+
+<div id="inicio-sesion">
+    <h2>Iniciar Sesión</h2>
+    <form action="procesar_inicio_sesion.php" method="post">
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" required><br><br>
+      
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena" required><br><br>
+      
+      <input type="submit" value="Iniciar sesión">
+        <!-- para que al apretar iniciar sesion vaya al index, completar con JS
+         <form action="./index.html" method="POST"></form> -->
+
+    </form>
+    <p>¿No tenés una cuenta? <a href="./inscripcion.html">Registrate acá</a>.</p>
+    <p>¿Olvidaste tu contraseña? <a href="./recuperarContrasena.html">Recuperala</a>.</p>
+    
+</div>
+  
+<section class="container" id="main-content">
+    <!-- Aquí van las secciones de la página principal -->
+    
+    <!-- Que es ser un colaborador de la BC -->
+    <section id="colaborador_bc">
+        <h2>¿Qué es la Red de Colaboradores de la Bolsa de Cereales?</h2>
+        <p>Es una red de más de 1200 profesionales técnicos del sector agropecuario que periódicamente 
+            colaboran con datos e información acerca de la producción de cultivos en sus respectivas 
+            áreas de influencia.</p>
+            <br>
+        <h2>¿Qué es un Colaborador BC?</h2>
+        <p>Un Colaborador de la Bolsa de Cereales (Colaborador BC) es un asesor destacado que maneja conocimientos
+             técnicos sobre la producción de cultivos extensivos de grano y posee amplia experiencia en su zona de 
+             referencia.</p>
+             <br>
+        <h2>¿Cuáles son las características de un Colaborador BC?</h2>
+        <p>Este profesional tiene una visión integral del sistema productivo local y maneja periódicamente el 
+            detalle de los planteos técnicos utilizados en la región.</p>
+            
+        <p>Los Colaboradores son asesores (no productores) y son todos profesionales técnicos de distintos ámbitos, 
+            agronomías, redes comerciales, distribuidores, acopios, asociaciones e instituciones, entre otros.</p>
+            <br>
+        <h2>¿Qué implica ser un Colaborador BC?</h2>
+        <p>Un Colaborador podrá ser consultado por el equipo de encuestadores de la Bolsa de Cereales, con una frecuencia
+            variable en el tiempo que dependerá de distintos factores relacionados a la metodología de relevamiento.</p>
+            
+        <p>La consulta se realiza mayormente en forma telefónica, aunque también se utiliza el contacto vía mail, 
+            whatsapp o en ocasiones a nivel personal.</p>
+            
+        <p>El sistema de encuestas está organizado en ciclos mensuales para dividir los llamados a toda la red: por 
+            esto un mismo Colaborador no recibe más de un llamado al mes (en el caso de mayor frecuencia).</p>
+            <
+        <p>En general, un Colaborador BC puede recibir consultas por dos tipos de encuestas: una en el marco del 
+            Panorama Agrícola Semanal (consulta PAS) y otra en el marco del Relevamiento de Tecnología Agrícola 
+            Aplicada (consulta ReTAA).</p>
+            <br>
+            <p>Aquí se muestra un cuadro a modo orientativo, según tipo de encuesta:</p>
+            
+
+            <table border="1">
+                <tr>
+                    <td>TIPO DE ENCUESTA</td>
+                    <td>PAS</td>
+                    <td>RETAA</td>
+                </tr>
+                <tr>
+                    <td>Llamados en el año</td>
+                    <td>6 a 12</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Duración del llamado</td>
+                    <td>5 a 10 minutos</td>
+                    <td>15 a 30 minutos</td>
+                </tr>
+                <tr>
+                    <td>Frecuencia de relevamiento</td>
+                    <td>Semanal</td>
+                    <td>Anual (al cierre de cosecha de cada cultivo)</td>
+                </tr>
+                <tr>
+                    <td>Rubros generales de la consulta</td>
+                    <td>Precipitaciones, Avance de cosecha o de siembra, Variación en área sembrada, 
+                        Condición del cultivo, Humedad de suelo, Rendimiento</td>
+                    <td>Nivel Tecnológico, Siembra Directa, Cultivos de cobertura, Aplicación variable 
+                        de insumos, Densidad de siembra, Material de siembra (tipo de híbridos, GM, ciclos 
+                        o variedades, etc.), Fertilización, Fitosanitarios, Rendimiento</td>
+                </tr>
+            </table>
+        <h2>¿Cómo funciona el Programa de Colaboradores?</h2>
+        <p>Para la vinculación con su red y los profesionales que la integran, la Bolsa de Cereales cuenta con un 
+            Programa de Colaboradores, el cual consta de tres ejes principales:</p>
+            <ul>
+                <li>Marco institucional y legal</li>
+                <li>Acciones de fidelización y comunicación</li>
+                <li>Beneficios <a href="./canjes.html">Conocelos</a></li>
+            </ul>
+
+        <p>El marco institucional del Programa promueve los objetivos de fidelizar a los colaboradores actuales, 
+            generar un sentido de comunidad y sumar nuevos referentes a la red. Todas las acciones de fidelización 
+            y los beneficios quedan enmarcados dentro de dicho programa.</p>
+            
+        <p>Entre las principales acciones de fidelización se encuentra este espacio de colaboradores en la página web, 
+            como también campañas de comunicación, convenios institucionales con entidades o empresas, encuestas de 
+            satisfacción o canales de contacto directo, como redes o mailing.</p>
+           
+        <p>Actualmente, los colaboradores de la red pueden acceder a distintos beneficios del programa, acorde al 
+            ranking que logren en el sistema de encuestas durante el año. Algunos ejemplos de beneficios son descuentas 
+            o becas para cursos y programas de capacitación, presentes corporativos, diplomas de reconocimiento, 
+            entradas a congresos y eventos, entre otros.</p>
+            <br>
+
+            <p><a href="./inscripcion.html">QUIERO SUMARME</a>.</p>
+            
+            <br>
+        
+
 </body>
 </html>
