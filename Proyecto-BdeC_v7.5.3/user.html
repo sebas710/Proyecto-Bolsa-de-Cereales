@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRANET - Red de Colaboradores BC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_responsive.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"> <!-- link con favicon-->
+</head>
+<body id="bodyUserHtml">
+    <header>
+        <div id="logo">
+            <a href= https://www.bolsadecereales.com/ target="_blank"><img src="img/logo.png" alt="Logo Bolsa de Cereales 170 aniversario"></a>
+        </div>
+        <div id="texto-cabecera">
+            <h1>Red de Colaboradores BC</h1>
+        </div>       
+        <div id="login">
+            <!-- Los datos del usuario recolectados del json se insertarán aquí -->
+        </div>
+                
+    </header>
+    <!--MENU HAMBURGUESA Cami-->
+    <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+    <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+        <ul class="navlista">
+            <li><a href="mislotes2.html" >MIS LOTES</a></li>
+            <li><a href="redcolaboradores2.html">MI RED</a></li>
+            <li><a href="historial2.html">HISTORIAL DE CARGA</a></li>
+            <li><a href="miscanjes2.html">MIS CANJES</a></li>
+            <li><a href="referido2.html">COMPARTIR REFERIDO</a></li>
+            <li><a href="ajustes2.html">AJUSTES</a></li>
+        </ul>
+
+    </nav>
+
+    <div id="mainUserHtml"> 
+        <div id="menu">
+            <div class="boton"><a href="mislotes.html" target="principal"> MIS LOTES</a></div>
+            <div class="boton"><a href="redcolaboradores.html" target="principal">MI RED </a></div>
+            <div class="boton"><a href="historial.html" target="principal">HISTORIAL DE CARGA</a></div>
+            <div class="boton"><a href="miscanjes.html" target="principal">MIS CANJES</a></div>
+            <div class="boton"><a href="referido.html" target="principal"> COMPARTIR REFERIDO</a></div>
+            <div class="boton"><a href="ajustes.html" target="principal"> AJUSTES</a></div>
+        </div>
+    
+        <div id="contenido">
+            <iframe name="principal" src="inicio.html" style="width:100%; height:100%; border:none;"></iframe>
+        </div>
+    
+        <div id="cotizaciones">
+            <iframe name="principal" src="dolar.html" style="width:100%; height:100%; border:none;"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        Desarrollado por Mesa 4 <br> Sebastian Allevato, Camila Callejo, Martin Gerbaldo y Daniela Venturino
+    </footer>
+
+    <script src="./js/scripts.js"></script>
+    
+</body>
+</html>
