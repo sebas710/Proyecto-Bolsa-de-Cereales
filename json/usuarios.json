@@ -6,7 +6,8 @@
             "nombre": "Daniela",
             "apellido": "Venturino",
             "ciudad": "Buenos Aires",
-            "puntos": 1500
+            "puntos": 1500,        
+            "rol": "user"
         },
         {
             "usuario": "sebastian",
@@ -14,7 +15,8 @@
             "nombre": "Sebastian",
             "apellido": "Allevato",
             "ciudad": "Pergamino",
-            "puntos": 1100
+            "puntos": 1100,        
+            "rol": "user"
         },
         {
             "usuario": "martin",
@@ -22,7 +24,8 @@
             "nombre": "Martin",
             "apellido": "Gerbaldo",
             "ciudad": "Río Cuarto",
-            "puntos": 1320
+            "puntos": 1320,        
+            "rol": "user"
         },
         {
             "usuario": "camila",
@@ -30,7 +33,14 @@
             "nombre": "Camila",
             "apellido": "Callejo",
             "ciudad": "Santa Rosa",
-            "puntos": 1260
+            "puntos": 1260,        
+            "rol": "user"
+        },
+
+        {
+            "usuario": "admin",
+            "contraseña": "admin",        
+            "rol": "admin"
         }
     ]
 }
