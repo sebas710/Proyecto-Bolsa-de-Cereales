@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - Intranet Bolsa de Cereales</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="volver">
+               <p>Volver a la pagina de <a href="./index.html">Inicio de sesión</a>.</p>
+               <p>Ir a la web oficial de <a href= https://www.bolsadecereales.com/ >Bolsa de Cereales</a>.</p>
+      </div>
+<section class="container">
+    <h1>Inscripción</h1>
+    <!-- Formulario de inscripción -->
+    <form action="procesar_inscripcion.php" method="POST">
+        <!-- Aquí van los campos del formulario de inscripción -->
+        <div>
+            <h2>Datos Personales</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required><br>
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br>
+        <label for="address">Domicilio:</label>
+        <input type="text" id="domicilio" name="domicilio" required><br>
+        <label for="codpostal">Código Postal:</label>
+        <input type="text" id="codpostal" name="codpostal" required><br>
+        <label for="provincia">Provincia:</label>
+        <input type="text" id="provincia" name="provincia" required><br>
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" required><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required><br>
+        <h2>Datos de ocupación</h2>
+        <label for="ocupacion">Ocupación:</label>
+        <select id="ocupacion" name="ocupacion">
+        <option value="particular">Asesor Particular</option>
+        <option value="productor">Productor</option>
+        <option value="asesoremp">Asesor perteneciente a empresa</option><br>
+    </select><br>
+        <label for="empresa">Nombre de Empresa:</label>
+        <input type="text" id="empresa" name="empresa" required><br>
+        
+
+        <h2>Datos de preferencia para encuesta</h2>
+        <label for="contacto">¿Cómo preferís que te contactemos?:</label><br>
+        <input type="radio" id="mail" name="contacto" value="Mail"> <label for="mail">Mail</label><br>
+        <input type="radio" id="whatsapp" name="contacto" value="WhatsApp"> <label for="whatsapp">WhatsApp</label><br>
+        <input type="radio" id="llamada" name="contacto" value="Llamada Telefónica"> <label for="llamada">Llamada Telefónica</label><br>
+        <label for="franja_horaria">Franja Horaria para Llamada:</label>
+        <select id="franja_horaria" name="franja_horaria">
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+            <option value="noche">Noche</option>
+        </select><br>
+    </div>
+    <div>
+        <h2>Superficie y cultivos asesorados</h2>
+        <label for="hectareas">Hectáreas Asesoradas:</label>
+        <input type="number" id="hectareas" name="hectareas" required><br>
+        <label for="cultivos">Cultivos en la Zona:</label><br>
+        <input type="checkbox" id="soja" name="cultivos[]" value="Soja"> <label for="soja">Soja</label><br>
+        <input type="checkbox" id="maiz" name="cultivos[]" value="Maíz"> <label for="maiz">Maíz</label><br>
+        <input type="checkbox" id="trigo" name="cultivos[]" value="Trigo"> <label for="trigo">Trigo</label><br>
+        <input type="checkbox" id="girasol" name="cultivos[]" value="Girasol"> <label for="girasol">Girasol</label><br>
+        <input type="checkbox" id="sorgo" name="cultivos[]" value="Sorgo"> <label for="sorgo">Sorgo</label><br>
+        <input type="checkbox" id="cebada" name="cultivos[]" value="Cebada"> <label for="cebada">Cebada</label><br>
+
+    </div>
+        <input type="submit" value="Enviar">
+
+
+
+    </form>
+</section>
+
+</body>
+</html>

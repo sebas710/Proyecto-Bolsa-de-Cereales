@@ -1,0 +1,115 @@
+<!-- Como sacar datos del BCRA
+ Usamos esta que es libre, otras eran con un GET y clave
+ En el Frontend utilizamos una URL (v1) que luego dejó de ser válida el 15/06/2024
+https://www.bcra.gob.ar/Catalogo/Content/files/pdf/principales-variables-v1.pdf
+GET api.bcra.gob.ar/estadisticas/v1/principalesvariables
+API GRATUITA: https://api.bcra.gob.ar/estadisticas/v1/principalesvariables (Utilizada en Frontend, deja de valer el 15/06/2024)
+Nueva API Gratuita v2.0 que se utiliza en Backend: https://api.bcra.gob.ar/estadisticas/v2.0/PrincipalesVariables
+Sino hay una que podría tomar una variable pero por rango de fechas:
+Ejemplo, reservas (id = 1):
+https://api.bcra.gob.ar/estadisticas/v2.0/DatosVariable/1/2024-01-01/2024-06-28
+
+Sino hay un video donde lo explican pero con mucha APIs que tiene el BCRA, pero con registro
+ver video https://www.youtube.com/watch?v=_Wl-CiBlIds con API del BCRA. Ejemplo de la profesora APIMovies 
+que usa GET para loguear.
+Igual en este proyecto utilizamos la que es de libre uso.
+Todas las APIs del BCRA
+https://estadisticasbcra.com/api/documentacion
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Valor Dolar</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background-color: transparent;">
+
+    <main>
+
+
+        <div id="recorridoVariable">
+        </div>
+
+        <div id="recorridoFijo">
+        </div>
+
+
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <script>
+            var data
+            //   const datosBCRA = "1234" //Esto comentarlo, armé un array
+
+
+            // ESTO COMENTARLO HASTA EL FINAL DE document.querySelector y descomentar lo de arriba
+            fetch(`https://api.bcra.gob.ar/estadisticas/v2.0/PrincipalesVariables`)
+                .then(response => response.json())
+                .then(data => {
+
+                    let cad = `
+                    <h4>Información económica importante:</h2>`
+                    // DATA NO ES ITERABLE, NO ES UN ARRAY. SI LO ES DATA.RESULTS for (let elemento of data.results) {` 
+
+                    /*
+                for (elemento of data.results) {
+                cad = cad + `
+                <p>${data.results[elemento].descripcion + ": " + data.results[elemento].valor}</p>                         `
+                }     
+                */
+                    // NO ANDA FOR OF
+                    for (let elemento = 0; elemento < 4; elemento++) {
+                        cad = cad + `
+                    <p>${data.results[elemento].descripcion + ": " + data.results[elemento].valor}</p>                         `
+                    }
+
+                    document.querySelector("#recorridoVariable").innerHTML = cad
+                })
+
+            /* Ahora pruebo trayendo variables de a una, sino podría haber hecho un vector y recorrerlo
+            Era más prolijo pero probé trayendo de las dos maneras */
+
+            fetch(`https://api.bcra.gob.ar/estadisticas/v1/principalesvariables`)
+                .then(response => response.json())
+                .then(data => {
+
+                    console.log(data)
+                    let cad = ``
+                    cad = `
+                                       
+                    <p>${data.results[23].descripcion + ": " + data.results[23].valor}</p>
+                    <p>${data.results[24].descripcion + ": " + data.results[24].valor}</p>
+                    <p>${data.results[25].descripcion + ": " + data.results[25].valor}</p>
+
+                    `
+
+
+
+                    document.querySelector("#recorridoFijo").innerHTML = cad
+                })
+
+
+
+
+
+
+
+
+        </script>
+
+    </main>
+
+    <!-- Elimino Footer porque sino me queda parte el color porque superpone la caja
+    <footer>
+
+    </footer>
+    -->
+</body>
+
+</html>

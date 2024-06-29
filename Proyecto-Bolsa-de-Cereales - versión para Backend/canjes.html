@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <table id="volver">
+    <tr>
+        <td style="align-items:left;"> 
+            <a href="./inicio.html">Volver</a>
+        </td>
+ 
+    </tr>
+</table>     
+
+  <h1 style="text-align: center;">Catálogo de Premios</h1>
+  <div id="catalogo" class="grid-container">
+  
+      <div class="premio">
+      <h2>Set de mate</h2>
+      <img src="./img/set_mate.jpg" alt="set_mate">
+      <p>Puntos necesarios: 1000</p>
+      <button onclick="mostrarDescripcion('descripcion1')">Ver Descripción</button>
+        <div class="descripcion" id="descripcion1">
+        <p>Incluye mate, bombilla, yerbera, termo de acero y bolso matero</p>
+        <button onclick="ocultarDescripcion('descripcion1')">Cerrar</button>
+        </div>
+        <button>Canjear</button>
+      </div>
+    
+  <div class="premio">
+    <h2>Desayuno en YPF</h2>
+    <img src="./img/desayuno.jpg" alt="desayuno">
+    <p>Puntos necesarios: 1500</p>
+    <button onclick="mostrarDescripcion('descripcion2')">Ver Descripción</button>
+    <div class="descripcion" id="descripcion2">
+        <p>Incluye infusión a eleccion + 3 medialunas</p>
+      <button onclick="ocultarDescripcion('descripcion2')">Cerrar</button>
+    </div>
+    <button>Canjear</button>
+  </div>
+
+  <div class="premio">
+    <h2>Kit de parasol</h2>
+    <img src="./img/parasol.webp" alt="kit_parasol">
+    <p>Puntos necesarios: 500</p>
+    <button onclick="mostrarDescripcion('descripcion3')">Ver Descripción</button>
+    <div class="descripcion" id="descripcion3">
+        <p>Incluye parasol para parabrisas delantero y trasero + juego de sopapas</p>
+      <button onclick="ocultarDescripcion('descripcion3')">Cerrar</button>
+    </div>
+    <button>Canjear</button>
+  </div>
+  
+  <div class="premio">
+    <h2>Pluviómetro</h2>
+    <img src="./img/pluviometro.jpg" alt="pluviometro">
+    <p>Puntos necesarios: 500</p>
+    <button onclick="mostrarDescripcion('descripcion4')">Ver Descripción</button>
+    <div class="descripcion" id="descripcion4">
+        <p>Incluye recipiente medidor + soporte plástico</p>
+      <button onclick="ocultarDescripcion('descripcion4')">Cerrar</button>
+    </div>
+    <button>Canjear</button>
+  </div>
+
+  <div class="premio">
+    <h2>Soporte de Celular</h2>
+    <img src="./img/soporte_celular_auto.jpeg" alt="soporte de celular para auto">
+    <p>Puntos necesarios: 500</p>
+    <button onclick="mostrarDescripcion('descripcion5')">Ver Descripción</button>
+    <div class="descripcion" id="descripcion5">
+        <p>Sistema de agarre: Gancho para ventilación</p>
+      <button onclick="ocultarDescripcion('descripcion5')">Cerrar</button>
+    </div>
+    <button>Canjear</button>
+  </div>
+  <!-- Agrega más premios según sea necesario -->
+</div>
+  <script src="./js/scripts.js"></script>
+</body> 
+</html>
